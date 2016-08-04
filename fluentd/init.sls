@@ -28,7 +28,7 @@ fluentd_elasticsearch:
 
 fluentd_service:
   service.running:
-    - name: docker
+    - name: td-agent
     - enable: True
     - require:
       - pkg: fluentd_package
