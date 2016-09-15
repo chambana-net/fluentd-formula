@@ -38,7 +38,5 @@ fluentd_service:
     - enable: True
     - require:
       - pkg: fluentd_package
-      - cmd: fluentd_systemd
     - watch:
       - pkg: fluentd_package
-      - cmd: fluentd_systemd
