@@ -26,6 +26,12 @@ fluentd_elasticsearch:
     - require:
       - pkg: fluentd_package
 
+fluentd_collectd_unroll:
+  cmd.run: 
+    - name: td-agent-gem install fluent-plugin-collectd-unroll
+    - require:
+      - pkg: fluentd_package
+
 fluentd_service:
   service.running:
     - name: td-agent
